@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>
+		Red Stone Restaurant-Contact Us
+	</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+<style>
+
+form {
+margin-left: 35%;
+font-size: medium;
+color: #1a0900;
+}
+
+input {
+width: 25em;
+color: #1a0900;
+display: block;
+border: 1px solid #1a0900;
+background-color: #fff2e6;
+padding: 2px;
+margin: 5px 0px;
+}
+
+input[type=radio], input[type=checkbox] {
+display: inline;
+width: 2em;
+}
+
+option {
+background-color: #ffcccc;
+}
+textarea {
+display: block;
+border: 1px solid #1a0900;
+background-color: #fff2e6;
+color: #1a0900;
+font-size: large;
+padding: 2px;
+margin: 5px 0px;
+}
+
+input[type=number] {
+background-color: #ccf2ff;
+}
+
+input[type=submit], input[type=reset] {
+font-weight: 600;
+border-width: 3px;
+border-radius: 10px;
+}
+
+input[type=reset] {
+background-color: #e6ffe6;
+border-color: #000099;
+}
+</style>
+</head>
+<body id="container">
+	<header>
+		<img src="images/logo.jpg" alt="Red Stone Restaurant logo" width="150" height="150">
+		<h1>Contact Us</h1>
+	</header>
+	<nav>
+	<ul>
+		<li><a href="index.html">Home Page</a></li>
+		<li><a href="menu.html">Menu</a></li>
+		<li><a href="aboutus.html">About Us</a></li>
+		<li><a href="chef.html">Chef</a></li>
+		<li><a href="events.html">Events</a></li>
+		<li><a href="history.html">History</a></li>
+		<li><a href="contactus.html">Contact Us</a></li>
+	</ul>
+	</nav>
+<main>
+<h2>Let us know how we did</h2>
+<form action="#" method="post" autocomplete="on">
+	<label>First Name:</label>
+		<input type="text" name="first_name" required>
+	
+	<label>Last Name:</label>
+		<input type="text" name="last_name" required>
+	
+	<label>Email:</label>
+		<input type="email" name="email" autocomplete="off" required>
+	
+	<label>Enter your four-digit passcode, then click OK:</label>
+	<input id="id1" type="number" min="1000" max="9999" name="passcode">
+	<button onclick="myFunction()" type="button">OK</button>
+	<p id="passcode"></p>
+	<label>Phone:</label>
+		<input type="tel" name="phone">
+	<br>
+	<label>What is your favorite type of meal?</label>
+	<br>
+	<input type="checkbox" name="meal" value="grains"><label>Grains</label>
+	<br>
+	<input type="checkbox" name="meal" value="poultry"><label>Poultry</label>
+	<br>
+	<input type="checkbox" name="meal" value="fish"><label>Fish</label>
+	<br>
+	<input type="checkbox" name="meal" value="dessert"><label>Desserts</label>
+	<br>
+	<input type="checkbox" name="meal" value="vegetables"><label>Vegetables</label>
+	<br>
+	<br>
+	<label>What time of day do you like to visit?</label>
+	<select name="time">
+		<option value="#">No Preference</option>
+		<option value="morning">Morning</option>
+		<option value="afternoon">Afternoon</option>
+		<option value="evening">Evening</option>
+		<option value="latenight">Late Night</option>
+	</select>
+	<br>
+	<br>
+	<label>How would you rate your most recent visit?</label>
+	<br>
+	<input type="radio" name="rate" value="excellent"><label>Excellent</label>
+	<br>
+	<input type="radio" name="rate" value="good"><label>Good</label>
+	<br>
+	<input type="radio" name="rate" value="ok"><label>Ok</label>
+	<br>
+	<input type="radio" name="rate" value="bad"><label>Bad</label>
+	<br>
+	<input type="radio" name="rate" value="terrible"><label>Terrible</label>
+	<br>
+	<br>
+	<label>Comments:</label>
+		<textarea name="comments" rows="15" cols="50"></textarea>
+	<input type="reset" value="Reset">
+	<input type="submit" value="Submit Form">
+</form>
+</main>
+<footer>
+	<p>
+		<a href="index.html">Home Page</a> | 
+		<a href="menu.html">Menu</a> | 
+		<a href="aboutus.html">About Us</a> | 
+		<a href="chef.html">Chef</a> | 
+		<a href="events.html">Events</a> | 
+		<a href="history.html">History</a> | 
+		<a href="contactus.html">Contact Us</a>
+	</p>
+</footer>
+<script>
+
+function myFunction() {
+var inpObj = document.getElementById("id1");
+if (inpObj.checkValidity() == false) {
+document.getElementById("passcode").innerHTML = 
+inpObj.validationMessage;
+} else {
+document.getElementById("passcode").innerHTML = "Passcode Valid";
+}
+}
+</script>
+
+</body>
+</html>
